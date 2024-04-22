@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head.ejs') %>
+	<body class="bg-gray-900">
+		<%- include('partials/navBar.ejs') %>
+		<main>
+			<% if (!user) { %>
+			<div
+				class="w-full h-[80vh] flex flex-col justify-center items-center gap-8"
+			>
+				<p
+					class="text-5xl tracking-wider font-light text-center text-white"
+				>
+					"Welcome to your productivity playground! <br />Let's turn
+					your To-Dos into Ta-Das!"
+				</p>
+
+				<div
+					class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+				>
+					<a
+						href="/api/users/login"
+						class="text-gray-300 hover:text-white rounded-md px-3 py-2 text-xl font-medium"
+						>Log in</a
+					>
+					<a
+						href="/api/users/register"
+						class="text-gray-300 bg-indigo-600 hover:bg-indigo-700 hover:text-white rounded-md px-3 py-2 text-xl font-medium"
+						>Register</a
+					>
+				</div>
+			</div>
+			<% } else { %>
+			<div class="grid grid-cols-3 mt-4 px-4 gap-4">
+				<div
+					class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+				>
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Noteworthy technology acquisitions 2021
+					</h5>
+					<p class="font-normal text-gray-700 dark:text-gray-400">
+						Here are the biggest enterprise technology acquisitions
+						of 2021 so far, in reverse chronological order.
+					</p>
+				</div>
+				<div
+					class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+				>
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Noteworthy technology acquisitions 2021
+					</h5>
+					<p class="font-normal text-gray-700 dark:text-gray-400">
+						Here are the biggest enterprise technology acquisitions
+						of 2021 so far, in reverse chronological order.
+					</p>
+				</div>
+				<div
+					class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+				>
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Noteworthy technology acquisitions 2021
+					</h5>
+					<p class="font-normal text-gray-700 dark:text-gray-400">
+						Here are the biggest enterprise technology acquisitions
+						of 2021 so far, in reverse chronological order.
+					</p>
+				</div>
+				<div
+					class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+				>
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Noteworthy technology acquisitions 2021
+					</h5>
+					<p class="font-normal text-gray-700 dark:text-gray-400">
+						Here are the biggest enterprise technology acquisitions
+						of 2021 so far, in reverse chronological order.
+					</p>
+				</div>
+			</div>
+			<% } %>
+		</main>
+
+		<script>
+			const userMenuBtn = document.querySelector("#user-menu-button");
+			const userMenu = document.querySelector("#user-menu");
+
+			userMenuBtn.addEventListener("click", (event) => {
+				userMenu.classList.toggle("animate-entering");
+				userMenu.classList.toggle("animate-leaving");
+			});
+		</script>
+	</body>
+</html>
